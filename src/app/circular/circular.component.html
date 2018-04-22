@@ -1,0 +1,50 @@
+
+<h2>"{{happyText}}"</h2>
+
+<button (click)="changeQuote()">Change the Quote</button>
+
+<ol>
+  <li *ngFor="let task of myToDos">{{task}}</li>
+</ol>
+
+<button (click)="goToForm()">Fill Some Details</button>
+
+<textarea name="aboutMe" class="form-control chatArea"
+          placeholder="A sentence or two describing who you are, followed by a few lines about your interests, passions, skills, etc">
+</textarea>
+
+<div class="chatArea">
+  <emoji-input [(model)]="emoji"
+               [textArea]="{cols: 40, rows: 5}"
+               [popupAnchor]="'bottom'"
+               (setPopupAction)="setPopupAction($event)">
+  </emoji-input>
+
+  <button (click)="openEmojis()">
+    :)
+  </button>
+</div>
+
+
+
+<!--<textarea name="emojiPicker" title="emojiPicker" class="form-control chatArea" id="example1"></textarea>-->
+
+<div class="span6">
+  <textarea id="emojionearea1">Default :smile:</textarea>
+</div>
+
+<div class="span6">
+  <textarea id="emojionearea5"></textarea>
+</div>
+
+<div class="span6">
+  <div contenteditable="true" id="emojiDir" appEmojiPicker></div>
+</div>
+
+
+<!--
+<h1 class="title" style="display:none">
+  {{title}}
+</h1>
+<button (click)="toggleTitle()"> clickhere</button>
+-->
