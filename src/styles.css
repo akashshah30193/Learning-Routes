@@ -23,3 +23,8 @@
   width: 48%;
   padding: 1%;
 }
+
+.terminal, .cmd {
+  color: #000;
+  background-color: white;
+}

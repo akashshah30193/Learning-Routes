@@ -55,6 +55,24 @@ export class CircularComponent implements OnInit, AfterViewInit {
         }
       }
     });
+
+
+    $('#terminal1').terminal(function(command) {
+      if (command !== '') {
+        console.log('Emit a socket');
+        var result = eval(command);
+        if (result != undefined) {
+          this.echo(String(result));
+        }
+      }
+    }, {
+      greetings: 'Javascript Interpreter',
+      name: 'js_demo',
+      height: 400,
+      width: 1000,
+      prompt: '> '
+    });
+
   }
 
 
@@ -76,6 +94,15 @@ export class CircularComponent implements OnInit, AfterViewInit {
     let list = this.getURLs("Hello www.google.com World http://yahoo.com");
 
     console.log(list);
+
+    let tr = $('#terminal1').terminal();
+
+    console.log(tr);
+    tr.echo('Perfect');
+    tr.echo('<b>Hello</b> ', {raw: true});
+
+    tr.echo('<div class="siteLogo"><img src="../../assets/themes/images/logo.jpg"  alt="" width="73" height="22"></div>', {raw: true});
+
   }
 
   goToForm() {

@@ -17,8 +17,7 @@ export const appRoutes: Routes = [
     },
     {path: 'guess', component: PersonalFormComponent},
     {path: 'submitted', component: SubmitFormComponent},
-    {path: '**', redirectTo: ''}
+    {path: '**', redirectTo: 'circular'}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
-

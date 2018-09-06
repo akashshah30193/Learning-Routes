@@ -19,11 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../src/app/scripts/jquery.terminal.css",
         "../node_modules/emojionearea/dist/emojionearea.min.css",
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../src/app/scripts/jquery.terminal.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -9,6 +9,7 @@ import { appRoutes } from './routes';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
 import {EmojiPickerModule} from "ng-emoji-picker";
 import { EmojiPickerDirective } from './emoji-picker.directive';
+import {AvatarModule} from 'ngx-avatar';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmojiPickerDirective } from './emoji-picker.directive';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    EmojiPickerModule
+    EmojiPickerModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
